@@ -95,6 +95,62 @@ const prov = [
     provinsi: "Nusa Tenggara Timur",
     ibuKota: "Kupang",
   },
+  {
+    provinsi: "Sulawesi Selatan",
+    ibuKota: "Makassar",
+  },
+  {
+    provinsi: "Sulawesi Tenggara",
+    ibuKota: "Kendari",
+  },
+  {
+    provinsi: "Sulawesi Tengah",
+    ibuKota: "Palu",
+  },
+  {
+    provinsi: "Sulawesi Barat",
+    ibuKota: "Mamuju",
+  },
+  {
+    provinsi: "Gorontalo",
+    ibuKota: "Gorontalo",
+  },
+  {
+    provinsi: "Sulawesi Utara",
+    ibuKota: "Manado",
+  },
+  {
+    provinsi: "Maluku",
+    ibuKota: "Ambon",
+  },
+  {
+    provinsi: "Maluku Utara",
+    ibuKota: "Sofifi",
+  },
+  {
+    provinsi: "Papua Barat Daya",
+    ibuKota: "Sorong",
+  },
+  {
+    provinsi: "Papua Barat",
+    ibuKota: "Manokwari",
+  },
+  {
+    provinsi: "Papua",
+    ibuKota: "Jayapura",
+  },
+  {
+    provinsi: "Papua Tengah",
+    ibuKota: "Nabire",
+  },
+  {
+    provinsi: "Papua Pegunungan",
+    ibuKota: "Jayawijaya",
+  },
+  {
+    provinsi: "Papua Selatan",
+    ibuKota: "Merauke",
+  },
 ];
 
 export default prov;

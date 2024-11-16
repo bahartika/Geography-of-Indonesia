@@ -17,8 +17,9 @@
         <!-- Navbar -->
         <nav>
           <ul class="flex">
+            <li><a href="#desc">Description</a></li>
             <li><a href="#peta">Peta</a></li>
-            <li><a href="#provinsi">Provinsi</a></li>
+            <li><a href="#profil-wilayah">Provinsi</a></li>
             <li><a href="#creator">Creator</a></li>
           </ul>
           <div class="menu-toggle">
@@ -47,6 +48,26 @@
     </header>
 
     <main>
+      <section id="desc">
+        <h2>Penjelasan Mengenai Indonesia</h2>
+        <p>
+          <span>Indonesia adalah negara kepulauan terbesar di dunia yang terletak di Asia Tenggara</span>, diapit oleh Samudra Pasifik dan Samudra Hindia. Negara ini terdiri dari lebih dari 17.000 pulau, termasuk beberapa pulau besar
+          seperti Jawa, Sumatra, Kalimantan, Sulawesi, dan Papua. Dengan jumlah penduduk lebih dari 270 juta jiwa, Indonesia adalah negara berpenduduk terbesar keempat di dunia. Ibu kotanya, Jakarta, adalah pusat ekonomi, politik, dan
+          budaya, sementara berbagai kota besar lainnya seperti Surabaya, Bandung, dan Medan juga menjadi pusat kegiatan penting.
+        </p>
+        <br />
+        <p>
+          Keanekaragaman budaya adalah salah satu kekayaan utama Indonesia. Negara ini memiliki <span>lebih dari 1.300 kelompok etnis dengan bahasa, tradisi, dan adat istiadat yang unik.</span> Bahasa Indonesia adalah bahasa resmi yang
+          digunakan untuk menyatukan keragaman ini. Selain itu, Indonesia dikenal dengan toleransi antaragama, meskipun mayoritas penduduknya beragama Islam. Festival, seni, dan makanan khas dari berbagai daerah, seperti tari Bali, batik
+          Jawa, dan rendang Minangkabau, menjadi daya tarik budaya yang memikat wisatawan lokal maupun internasional.
+        </p>
+        <br />
+        <p>
+          Indonesia juga kaya akan sumber daya alam, termasuk hutan tropis, tambang, dan lautan yang luas. Negara ini memiliki salah satu keanekaragaman hayati tertinggi di dunia, dengan
+          <span>flora dan fauna unik seperti komodo, orangutan, dan bunga Rafflesia arnoldii.</span> Namun, tantangan seperti deforestasi, polusi, dan ketimpangan ekonomi tetap menjadi perhatian utama. Dalam beberapa dekade terakhir,
+          Indonesia telah mengalami pertumbuhan ekonomi yang pesat dan memainkan peran penting dalam organisasi regional seperti ASEAN, serta memiliki pengaruh yang semakin besar dalam urusan internasional.
+        </p>
+      </section>
       <!-- Bagian Peta -->
       <section id="peta">
         <h2>Peta Indonesia</h2>
@@ -55,7 +76,7 @@
 
       <!-- Bagian Profil Wilayah dalam Bentuk Kartu -->
       <section id="profil-wilayah">
-        <h2>Profil Wilayah Indonesia</h2>
+        <h2>Daftar Provinsi di Indonesia</h2>
         <div id="cards-container">
           <!-- Tambahkan kartu-kartu lain untuk wilayah lainnya -->
         </div>
@@ -100,8 +121,10 @@
         const feedback = document.getElementById("feedback");
         if (answer === "Semarang") {
           feedback.textContent = "Benar! Ibu kota Jawa Tengah adalah Semarang.";
+          feedback.classList.add("green");
         } else {
           feedback.textContent = "Salah, coba lagi!";
+          feedback.classList.add("red");
         }
       }
     </script>

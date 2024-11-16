@@ -12,6 +12,7 @@ body {
   font-family: "Afacad Flux", serif;
   /* line-height: 1.6; */
   background-color: #232323;
+  box-sizing: border-box;
 }
 
 /* header start */
@@ -51,24 +52,40 @@ ul > li {
 ul li a {
   text-decoration: none;
   color: #f1ebca;
+  display: inline-block;
   transition: 400ms;
   font-weight: 500;
   padding: 5px 8px;
-  border-radius: 12px;
+  font-size: 1.5rem;
+  border: 2px solid transparent;
 }
 
 ul li a:hover {
-  background-color: #f4f4f9;
-  color: #191970;
+  background-color: #f1ebca;
+  color: #c62368;
+  box-shadow: 4px 4px 0 #232323;
+  border: 2px solid #232323;
+  transform: translateX(-4px) translateY(-4px);
+}
+
+ul li a:active {
+  background-color: #f1ebca;
+  color: #c62368;
+  border: 2px solid #232323;
+  transform: none;
+  box-shadow: none;
 }
 /* header end */
 
-/* dari gpt */
+main {
+  margin-top: 7rem;
+  color: #f4f4f9;
+}
+
 section {
   padding: 20px;
   margin: 10px auto;
   max-width: 1000px;
-  border: 2px solid white;
 }
 
 h1 {
@@ -78,14 +95,45 @@ h1 {
   line-height: normal;
 }
 
-main {
-  color: #f4f4f9;
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+section#peta {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#peta img {
+  width: 900px;
 }
 
 section#profil-wilayah > div {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+#cards-container {
+  height: 80vh;
+  overflow-y: scroll;
+  /* border: 2px solid white; */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Jalur transparan */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c62368; /* Thumb semi-transparan */
+  border-radius: 10px;
 }
 
 div.kartu {
@@ -95,6 +143,7 @@ div.kartu {
   margin: 10px 0;
   background-color: #f9f9f9;
   color: black;
+  text-align: center;
 }
 
 button {
@@ -115,11 +164,23 @@ button:hover {
 #feedback {
   margin-top: 10px;
   font-weight: bold;
+}
+
+.red {
+  color: #c62368;
+}
+
+.green {
   color: #4caf50;
 }
 
 .flex {
   display: flex;
+}
+
+span {
+  font-weight: bold;
+  color: #ebde97;
 }
 
 /* Hamburger Menu */
@@ -229,6 +290,11 @@ footer a:hover {
   main section {
     padding: 0;
     width: 100%;
+    padding: 0 1rem;
+  }
+
+  section#peta img {
+    width: 300px;
   }
 
   main.p-2rem {
