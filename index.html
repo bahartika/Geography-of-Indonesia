@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geografi Indonesia</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Bagian Header -->
+    <header id="home">
+      <div class="flex">
+        <div>
+          <img src="./assets/logo.png" alt="logo" width="60" />
+        </div>
+        <!-- Navbar -->
+        <nav>
+          <ul class="flex">
+            <li><a href="#peta">Peta</a></li>
+            <li><a href="#provinsi">Provinsi</a></li>
+            <li><a href="#creator">Creator</a></li>
+          </ul>
+          <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+        <!-- End of Navbar -->
+      </div>
+
+      <div class="title flex">
+        <div>
+          <h1>
+            Pengetahuan <br />
+            Geografi <br />
+            Indonesia
+          </h1>
+          <p>Belajar lebih dalam tentang geografi wilayah Indonesia!</p>
+        </div>
+        <div>
+          <img src="./assets/indonesia header.png" alt="indonesia" width="300" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Bagian Peta -->
+      <section id="peta">
+        <h2>Peta Indonesia</h2>
+        <img src="./assets/indonesia map.png" alt="Peta Indonesia" />
+      </section>
+
+      <!-- Bagian Profil Wilayah dalam Bentuk Kartu -->
+      <section id="profil-wilayah">
+        <h2>Profil Wilayah Indonesia</h2>
+        <div id="cards-container">
+          <!-- Tambahkan kartu-kartu lain untuk wilayah lainnya -->
+        </div>
+      </section>
+
+      <!-- Bagian Fakta Menarik -->
+      <section id="fakta-menarik">
+        <h2>Fakta Menarik tentang Indonesia</h2>
+        <ul>
+          <li>Indonesia memiliki sekitar 17.000 pulau.</li>
+          <li>Gunung tertinggi: Puncak Jaya di Papua.</li>
+          <li>Danau terdalam: Danau Matano di Sulawesi.</li>
+          <!-- Tambahkan fakta lainnya -->
+        </ul>
+      </section>
+
+      <!-- Bagian Kuis Sederhana -->
+      <section id="kuis">
+        <h2>Kuis Geografi Indonesia</h2>
+        <p>Ayo coba jawab pertanyaan berikut:</p>
+        <div>
+          <p>1. Ibu kota provinsi Jawa Tengah adalah...</p>
+          <button onclick="checkAnswer('Semarang')">Semarang</button>
+          <button onclick="checkAnswer('Surabaya')">Surabaya</button>
+          <button onclick="checkAnswer('Yogyakarta')">Yogyakarta</button>
+        </div>
+        <div id="feedback"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex">
+      <a href="#home">
+        <img src="./assets/up.svg" alt="home" width="50" />
+      </a>
+      <h4>Created by ©Bahartika, Study at Dicoding Academy</h4>
+    </footer>
+
+    <!-- Script JavaScript untuk Kuis -->
+    <script>
+      function checkAnswer(answer) {
+        const feedback = document.getElementById("feedback");
+        if (answer === "Semarang") {
+          feedback.textContent = "Benar! Ibu kota Jawa Tengah adalah Semarang.";
+        } else {
+          feedback.textContent = "Salah, coba lagi!";
+        }
+      }
+    </script>
+    <script type="module" src="./javascript/navbar.js"></script>
+    <script type="module" src="./javascript/card.js"></script>
+  </body>
+</html>
