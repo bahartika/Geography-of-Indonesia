@@ -114,13 +114,13 @@
             <div class="fact-item flex">
               <img src="./assets/bahasa.png" alt="" />
               <div>
-                <h3>Hewan Komodo</h3>
+                <h3>Bahasa daerah di Indonesia</h3>
                 <p>Menurut Ethnologue, Indonesia memiliki 715 bahasa daerah dan merupakan negara pemilik terbanyak kedua setelah Papua Nugini dengan 840 bahasa daerah.</p>
               </div>
             </div>
           </div>
         </article>
-        <aside>
+        <aside id="creator">
           <img src="./assets/creator.png" alt="Bahar" class="creator" />
           <h3>About the creator</h3>
           <p>Perkenalkan nama saya Bahartika Satria Wijaya, bisa panggil saya Bahar. Saya lahir pada tanggal 02 Juli 2001, di kota Pekanbaru, Riau. Saat ini Saya tinggal di Bandung.</p>
@@ -143,14 +143,34 @@
       <!-- Bagian Kuis Sederhana -->
       <section id="kuis">
         <h2>Kuis Geografi Indonesia</h2>
-        <p>Ayo coba jawab pertanyaan berikut:</p>
-        <div>
-          <p>1. Ibu kota provinsi Jawa Tengah adalah...</p>
-          <button onclick="checkAnswer('Semarang')">Semarang</button>
-          <button onclick="checkAnswer('Surabaya')">Surabaya</button>
-          <button onclick="checkAnswer('Yogyakarta')">Yogyakarta</button>
+        <div class="kuis-container flex">
+          <!-- Pertanyaan 1 -->
+          <div class="kuis-item">
+            <p>1. Ibu kota provinsi Jawa Tengah adalah...</p>
+            <button onclick="checkAnswer('Semarang', 1)">Semarang</button>
+            <button onclick="checkAnswer('Surabaya', 1)">Surabaya</button>
+            <button onclick="checkAnswer('Yogyakarta', 1)">Yogyakarta</button>
+            <div id="feedback-1"></div>
+          </div>
+
+          <!-- Pertanyaan 2 -->
+          <div class="kuis-item">
+            <p>2. Pulau terbesar di Indonesia adalah...</p>
+            <button onclick="checkAnswer('Sumatra', 2)">Sumatra</button>
+            <button onclick="checkAnswer('Jawa', 2)">Jawa</button>
+            <button onclick="checkAnswer('Kalimantan', 2)">Kalimantan</button>
+            <div id="feedback-2"></div>
+          </div>
+
+          <!-- Pertanyaan 3 -->
+          <div class="kuis-item">
+            <p>3. Gunung tertinggi di Indonesia adalah...</p>
+            <button onclick="checkAnswer('Gunung Rinjani', 3)">Rinjani</button>
+            <button onclick="checkAnswer('Puncak Jaya', 3)">Puncak Jaya</button>
+            <button onclick="checkAnswer('Gunung Semeru', 3)">Bromo</button>
+            <div id="feedback-3"></div>
+          </div>
         </div>
-        <div id="feedback"></div>
       </section>
     </main>
 
@@ -164,13 +184,24 @@
 
     <!-- Script JavaScript untuk Kuis -->
     <script>
-      function checkAnswer(answer) {
-        const feedback = document.getElementById("feedback");
-        if (answer === "Semarang") {
-          feedback.textContent = "Benar! Ibu kota Jawa Tengah adalah Semarang.";
+      function checkAnswer(answer, questionNumber) {
+        const feedback = document.getElementById(`feedback-${questionNumber}`);
+
+        // Jawaban benar untuk setiap pertanyaan
+        const correctAnswers = {
+          1: "Semarang", // Jawaban untuk pertanyaan 1
+          2: "Kalimantan", // Jawaban untuk pertanyaan 2
+          3: "Puncak Jaya", // Jawaban untuk pertanyaan 3
+        };
+
+        // Cek jawaban dan tampilkan feedback
+        if (answer === correctAnswers[questionNumber]) {
+          feedback.textContent = "Benar! Jawaban Anda tepat.";
+          feedback.classList.remove("red");
           feedback.classList.add("green");
         } else {
           feedback.textContent = "Salah, coba lagi!";
+          feedback.classList.remove("green");
           feedback.classList.add("red");
         }
       }
