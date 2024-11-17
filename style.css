@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   margin: 0;
@@ -311,10 +310,11 @@ footer a:hover {
 @media (min-width: 768px) and (max-width: 1024px) {
   header div.flex:not(.title) {
     background-color: #c62368;
-    padding: 0 3rem;
+    padding: 0 2rem;
     justify-content: space-between;
     place-items: center;
     box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2);
+    width: 100vw;
   }
 
   header div.title {
@@ -326,9 +326,13 @@ footer a:hover {
   }
 
   section#peta img {
-    width: 700px;
+    width: 600px;
     display: block;
     margin: auto;
+  }
+
+  section#profil-wilayah {
+    width: 100%;
   }
 
   section#fact {
